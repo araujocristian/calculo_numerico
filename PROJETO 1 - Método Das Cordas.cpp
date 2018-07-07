@@ -8,7 +8,7 @@ PROJETO 01 - METODOD DAS CORDAS
 */ 
 
 #include <iostream>  //BIBLIOTECA PARA ENTRADA E SAIDA DE DADOS
-#include <cmath>	// BIBLIOTECA PARA FUNCOES MATEMATICAS
+#include <cmath>  // BIBLIOTECA PARA FUNCOES MATEMATICAS
 using namespace std;
 
 double funcao (double x){ 
@@ -21,22 +21,22 @@ double cordas(double a, double b, double e1, double e2){
 	int cont = 0; //VARIAVEL PARA CONTADOR DE INTERAÇÕES
 	
 	f_a=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
-    f_b=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
-    c=(a*f_b - b*f_a)/(f_b-f_a); //CALCULANDO VALOR DA RAIZ
-    f_c=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
-    erro=fabs(b-a); // CALCULANDO ERRO 
-    cont++; //INCREMENTANDO CONTADOR
+	f_b=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
+	c=(a*f_b - b*f_a)/(f_b-f_a); //CALCULANDO VALOR DA RAIZ
+	f_c=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
+	erro=fabs(b-a); // CALCULANDO ERRO 
+	cont++; //INCREMENTANDO CONTADOR
     
 	while(erro>e1 || fabs(f_c)>e2){ //LOOPING COM VERIFICACAO DAS CONDICOES DE PARADA
 		cont++; //INCREMENTANDO CONTADOR
-        a=b; //TROCANDO O INCIO DA FAIXA
-        b=c; //TROCANDO O FIM DA FAIXA
-        f_a=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
-    	f_b=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
-        c=(a*f_b - b*f_a)/(f_b - f_a); //CALCULANDO VALOR DA RAIZ
-        f_c=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
-    	erro=fabs(b-a); // CALCULANDO ERRO 
-    }
+        	a=b; //TROCANDO O INCIO DA FAIXA
+        	b=c; //TROCANDO O FIM DA FAIXA
+        	f_a=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
+    		f_b=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
+        	c=(a*f_b - b*f_a)/(f_b - f_a); //CALCULANDO VALOR DA RAIZ
+        	f_c=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
+    		erro=fabs(b-a); // CALCULANDO ERRO 
+    	}
     
 	cout<<"\nRaiz: "<<c<<endl; //IMPRIME A RAIZ MAIS PROXIMA
 	cout<<"\nNumero de iteracoes: "<<cont<<endl; // IMPRIME O NUMERO DE INTERAÇÕES
@@ -57,12 +57,12 @@ int main(){
 	cout<<"\nInforme o valor de epsilon 2:"<<endl;
 	cin>>e2; //PEGA O VALOR DO EPSILON 2
 
-    if(a==b){ //VERIFICA SE EXISTE REALMENTE UMA FAIXA DE VALORES, E NÃO UM UNICO VALOR
-        cout<<"\nOs valores de 'a' e 'b' sao iguais. Digite um novo valor para o fim do intervalo 'b':"<<endl;
-        cin>>b;
-    }else{
-	cordas(a, b, e1, e2); //CHAMA O METODO NUMERICO
-    }
+	if(a==b){ //VERIFICA SE EXISTE REALMENTE UMA FAIXA DE VALORES, E NÃO UM UNICO VALOR
+        	cout<<"\nOs valores de 'a' e 'b' sao iguais. Digite um novo valor para o fim do intervalo 'b':"<<endl;
+        	cin>>b;
+    	}else{
+		cordas(a, b, e1, e2); //CHAMA O METODO NUMERICO
+    	}
 
 }
 
