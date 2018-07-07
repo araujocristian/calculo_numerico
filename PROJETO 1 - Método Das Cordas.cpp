@@ -17,24 +17,23 @@ double funcao (double x){
 
 // METODO DAS CORDAS
 double cordas(double a, double b, double e1, double e2){
-	double erro, f_a, f_b, c, f_c; //VARIAVEIS PARA RAIZ, FUNCAO PARA CADA VALOR E ERRO
+	double erro, fa, fb, c, fc; //VARIAVEIS PARA RAIZ, FUNCAO PARA CADA VALOR E ERRO
 	int cont = 0; //VARIAVEL PARA CONTADOR DE INTERAÇÕES
 	
-	f_a=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
-	f_b=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
-	c=(a*f_b - b*f_a)/(f_b-f_a); //CALCULANDO VALOR DA RAIZ
-	f_c=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
+	fa=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
+	fb=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
+	c=(a*fb - b*fa)/(fb-fa); //CALCULANDO VALOR DA RAIZ
+	fc=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
 	erro=fabs(b-a); // CALCULANDO ERRO 
-	cont++; //INCREMENTANDO CONTADOR
     
-	while(erro>e1 || fabs(f_c)>e2){ //LOOPING COM VERIFICACAO DAS CONDICOES DE PARADA
+	while(erro>e1 || fabs(fc)>e2){ //LOOPING COM VERIFICACAO DAS CONDICOES DE PARADA
 		cont++; //INCREMENTANDO CONTADOR
         	a=b; //TROCANDO O INCIO DA FAIXA
         	b=c; //TROCANDO O FIM DA FAIXA
-        	f_a=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
-    		f_b=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
-        	c=(a*f_b - b*f_a)/(f_b - f_a); //CALCULANDO VALOR DA RAIZ
-        	f_c=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
+        	fa=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
+    		fb=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
+        	c=(a*fb - b*fa)/(fb - fa); //CALCULANDO VALOR DA RAIZ
+        	fc=funcao(c); //CALCULANDO O VALOR DA FUNCAO PARA A RAIZ
     		erro=fabs(b-a); // CALCULANDO ERRO 
     	}
     
