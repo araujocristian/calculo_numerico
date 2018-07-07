@@ -2,7 +2,7 @@
 UNIVERSIDADE FEDERAL DA BAHIA - UFBA
 DISCIPLINA: CALCULO NUMERICO - MAT174
 PROFESSORA: RAFAELA SOUZA
-ALUNOS: CRISTIAN ARAUJO E FABRICIO CIQUEIRA
+ALUNOS: CRISTIAN ARAUJO E FABRICIO SIQUEIRA
 
 PROJETO 01 - METODOD DAS CORDAS  
 */ 
@@ -18,7 +18,7 @@ double funcao (double x){
 // METODO DAS CORDAS
 double cordas(double a, double b, double e1, double e2){
 	double erro, f_a, f_b, c, f_c; //VARIAVEIS PARA RAIZ, FUNCAO PARA CADA VALOR E ERRO
-	int cont = 0; //VARIAVEL PARA CONTADOR DE INTERAÇÕES
+	int cont = 0; //VARIAVEL PARA CONTADOR DE INTERAÃ‡Ã•ES
 	
 	f_a=funcao(a); //CALCULANDO O VALOR DA FUNCAO PARA O INICIO DA FAIXA
     f_b=funcao(b); //CALCULANDO O VALOR DA FUNCAO PARA O FIM DA FAIXA
@@ -39,8 +39,7 @@ double cordas(double a, double b, double e1, double e2){
     }
     
 	cout<<"\nRaiz: "<<c<<endl; //IMPRIME A RAIZ MAIS PROXIMA
-	cout<<"\nErro: "<<error<<endl; // IMPRIME O ERRO
-	cout<<"\nNumero de iteracoes: "<<cont<<endl; // IMPRIME O NUMERO DE INTERAÇÕES
+	cout<<"\nNumero de iteracoes: "<<cont<<endl; // IMPRIME O NUMERO DE INTERAÃ‡Ã•ES
 	
 	return c;
 }
@@ -58,11 +57,11 @@ int main(){
 	cout<<"\nInforme o valor de epsilon 2:"<<endl;
 	cin>>e2; //PEGA O VALOR DO EPSILON 2
 
-    if(a==b){ //VERIFICA SE EXISTE REALMENTE UMA FAIXA DE VALORES, E NÃO UM UNICO VALOR
+    if(a==b){ //VERIFICA SE EXISTE REALMENTE UMA FAIXA DE VALORES, E NÃƒO UM UNICO VALOR
         cout<<"\nOs valores de 'a' e 'b' sao iguais. Digite um novo valor para o fim do intervalo 'b':"<<endl;
         cin>>b;
     }else{
-		cordas(a, b, e1, e2); //CHAMA O METODO NUMERICO
+	cordas(a, b, e1, e2); //CHAMA O METODO NUMERICO
     }
 
 }
