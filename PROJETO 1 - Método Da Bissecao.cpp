@@ -2,7 +2,7 @@
 UNIVERSIDADE FEDERAL DA BAHIA - UFBA
 DISCIPLINA: CALCULO NUMERICO - MAT174
 PROFESSORA: RAFAELA SOUZA
-ALUNOS: CRISTIAN ARAUJO E FABRICIO CIQUEIRA
+ALUNOS: CRISTIAN ARAUJO E FABRICIO SIQUEIRA
 
 PROJETO 01 - METODOD DA BISSECAO
 */
@@ -17,7 +17,7 @@ double funcao (double x){
 
 //METODO DA BISSECAO
 double bissecao(double a, double b, double epsilon){ 
-    int cont = 0; //VARIAVEL PARA CONTADOR DE INTERAÇÕES
+    int cont = 0; //VARIAVEL PARA CONTADOR DE INTERAÃ‡Ã•ES
     double c, fc; //VARIAVEIS PARA RAIZ E FUNCAO PARA O VALOR DA RAIZ
     double error = fabs(b-a); //VARIAVEL PARA ERRO
     
@@ -29,13 +29,12 @@ double bissecao(double a, double b, double epsilon){
 		 
         if(fc*funcao(b) < 0) a = c; //ATRIBUI UM NOVO VALOR PARA O INICIO DA FAIXA DE VALORES
         
-        cont++; //INTERA O CONTADOR DE INTERAÇÕES
+        cont++; //INTERA O CONTADOR DE INTERAÃ‡Ã•ES
         error = fabs(b-a); // CALCULA O NOVO ERRO
     }
 	
 	cout<<"\nRaiz: "<<c<<endl; //IMPRIME A RAIZ MAIS PROXIMA
-	cout<<"\nErro: "<<error<<endl; // IMPRIME O ERRO
-	cout<<"\nNumero de iteracoes: "<<cont<<endl; // IMPRIME O NUMERO DE INTERAÇÕES
+	cout<<"\nNumero de iteracoes: "<<cont<<endl; // IMPRIME O NUMERO DE INTERAÃ‡Ã•ES
 	
 	return c;
 } 
@@ -51,12 +50,11 @@ int main(){
 	cout<<"\nInforme o valor de epsilon:"<<endl;
 	cin>>e; //PEGA O VALOR DO EPSILON
 
-    if(a==b){ //VERIFICA SE EXISTE REALMENTE UMA FAIXA DE VALORES, E NÃO UM UNICO VALOR
+    if(a==b){ //VERIFICA SE EXISTE REALMENTE UMA FAIXA DE VALORES, E NÃƒO UM UNICO VALOR
         cout<<"\nOs valores de 'a' e 'b' sao iguais. Digite um novo valor para o fim do intervalo 'b':"<<endl; 
         cin>>b;
     }else{
-		bissecao(a,b,e); //CHAMA O METODO NUMERICO
+	bissecao(a,b,e); //CHAMA O METODO NUMERICO
     }
-	
 	return 0;
 }
